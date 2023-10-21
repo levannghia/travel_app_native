@@ -1,13 +1,13 @@
-import Slides from "./onboarding/Slides";
 import ReusableText from "./reusable/ReusableText";
 import ReusableButton from "./button/ReusableButton";
 import HeightSpacer from "./reusable/HeightSpacer";
 import WidthSpacer from "./reusable/WidthSpacer";
+import Place from "./home/Place";
 
 export {
-    Slides,
     ReusableText,
     ReusableButton,
     HeightSpacer,
     WidthSpacer,
+    Place,
 }

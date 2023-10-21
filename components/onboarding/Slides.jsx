@@ -17,7 +17,7 @@ const Slides = ({item}) => {
             color={COLORS.white}
         />
         <HeightSpacer height={40}/>
-        <ReusableButton onPress={() => {}}
+        <ReusableButton onPress={() => navigation.navigate('Bottom')}
          btnText={"Let's go"}
          width={(SIZES.width - 50)/2.2}
          backgroundColor={COLORS.red}
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     image: {
         resizeMode: 'cover',
         width: SIZES.width,
-        height: SIZES.height,
+        height: "100%",
     },
     stack: {
         position: 'absolute',
