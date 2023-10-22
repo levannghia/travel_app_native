@@ -6,7 +6,7 @@ const statusBarHeight = StatusBar.currentHeight || 0;
 const reusable = StyleSheet.create({
     container: {
         flex: 1,
-        marginHorizontal: 20,
+        marginHorizontal: 10,
         ...Platform.select({
             android: {
               marginTop: statusBarHeight,

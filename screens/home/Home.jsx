@@ -1,17 +1,19 @@
-import { View, SafeAreaView, StatusBar } from 'react-native'
+import { View, SafeAreaView, StatusBar, ScrollView } from 'react-native'
 import reusable from '../../components/reusable/reusable.style'
 import React from 'react'
-import { HeightSpacer, ReusableText, Place } from '../../components'
+import { HeightSpacer, ReusableText, RecommenDations } from '../../components'
+import Place from '../../components/home/Place'
 import { SIZES, COLORS } from '../../constants/theme'
 import { TouchableOpacity } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
+import BestHotels from '../../components/home/BestHotels'
 import styles from './home.style'
 
 const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={reusable.container}>
       <StatusBar barStyle={'dark-content'} />
-      <View>
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom: 100}}>
         <View style={reusable.rowWithSpace('space-between')}>
           <ReusableText
             text={"Hey User!"}
@@ -31,8 +33,11 @@ const Home = ({ navigation }) => {
           color={COLORS.black}
         />
         <Place />
-        
-      </View>
+        <HeightSpacer height={15}/>
+        <RecommenDations/>
+        <HeightSpacer height={30}/>
+        <BestHotels/>
+      </ScrollView>
     </SafeAreaView>
   )
 }

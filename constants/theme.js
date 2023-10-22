@@ -1,4 +1,4 @@
-import { Dimensions } from 'react-native'
+import { Dimensions, Platform } from 'react-native'
 const { height, width } = Dimensions.get('window');
 
 const COLORS = {
@@ -18,12 +18,12 @@ const COLORS = {
 
 
 const SIZES = {
-    xSmall: 10,
-    small: 12,
-    medium: 16,
-    large: 20,
-    xLarge: 24,
-    xxLarge: 44,
+    xSmall: Platform.OS === 'ios' ? 10 : 8,
+    small: Platform.OS === 'ios' ? 12 : 10,
+    medium: Platform.OS === 'ios' ? 16 : 14,
+    large: Platform.OS === 'ios' ? 20 : 18,
+    xLarge: Platform.OS === 'ios' ? 24 : 22,
+    xxLarge: Platform.OS === 'ios' ? 44 : 40,
     height,
     width
 };

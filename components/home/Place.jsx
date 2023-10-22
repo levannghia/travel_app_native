@@ -2,6 +2,7 @@ import { StyleSheet, View, Image, VirtualizedList, Text } from 'react-native'
 import React from 'react'
 import { COLORS, SIZES } from '../../constants/theme'
 import HeightSpacer from '../reusable/HeightSpacer'
+import Country from "../../components/tiles/Country/Country"
 
 const Place = () => {
     const countries = [
@@ -56,6 +57,7 @@ const Place = () => {
         <View>
             <HeightSpacer height={20}/>
             <VirtualizedList
+                showsHorizontalScrollIndicator={false}
                 keyExtractor={item => item._id}
                 horizontal
                 data={countries}
@@ -63,7 +65,7 @@ const Place = () => {
                 getItem={(data, index) => data[index]}
                 renderItem={({item}) => (
                     <View style={{marginRight: SIZES.medium}}>
-                        <Text>{item.country}</Text>
+                        <Country item={item}/>
                     </View>
                 )}
             />
