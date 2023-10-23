@@ -22,7 +22,7 @@ const Home = ({ navigation }) => {
             color={COLORS.black}
           />
           <TouchableOpacity onPress={() => navigation.navigate('Search')} style={styles.box}>
-            <AntDesign name='search1' size={26} />
+            <AntDesign name='search1' size={24} />
           </TouchableOpacity>
         </View>
         <HeightSpacer height={SIZES.xLarge} />

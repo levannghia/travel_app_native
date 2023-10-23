@@ -6,6 +6,8 @@ import NetworkImage from "./reusable/NetworkImage";
 import RecommenDations from "./home/RecommenDations";
 import ReusableTile from "./reusable/ReusableTile";
 import Rating from "./reusable/Rating";
+import DescriptionText from "./reusable/DescriptionText";
+import PopularList from "./country/PopularList";
 
 export {
     ReusableText,
@@ -16,4 +18,6 @@ export {
     RecommenDations,
     ReusableTile,
     Rating,
+    DescriptionText,
+    PopularList,
 }

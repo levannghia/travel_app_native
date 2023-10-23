@@ -4,12 +4,14 @@ import reusable from './reusable.style'
 import { AntDesign } from '@expo/vector-icons';
 import { SIZES, COLORS } from '../../constants/theme';
 import { ReusableText} from "../../components"
+import { useNavigation } from '@react-navigation/native';
 
-const AppBar = ({title, color, color1, icon }) => {
+const AppBar = ({title, color, color1, icon, onPress, onPress1 }) => {
+    const navigation = useNavigation()
     return (
         <View style={styles.overlay}>
             <View style={reusable.rowWithSpace('space-between')}>
-                <TouchableOpacity style={styles.box(color)}>
+                <TouchableOpacity style={styles.box(color)} onPress={onPress}>
                     <AntDesign name='left' size={SIZES.large} />
                 </TouchableOpacity>
                 <ReusableText
@@ -19,7 +21,7 @@ const AppBar = ({title, color, color1, icon }) => {
                     color={COLORS.black}
                     align={'center'}
                 />
-                <TouchableOpacity style={styles.box1(color1)}>
+                <TouchableOpacity style={styles.box1(color1)} onPress={onPress1}>
                     <AntDesign name={icon} size={SIZES.large} />
                 </TouchableOpacity>
             </View>
@@ -37,6 +39,7 @@ const styles = StyleSheet.create({
         right: 0,
         justifyContent: "center",
     },
+    
     box: (color) => ({
         backgroundColor: color,
         width: 30,
@@ -45,6 +48,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     }),
+
     box1: (color1) => ({
         backgroundColor: color1,
         width: 30,
