@@ -22,7 +22,7 @@ const reusable = StyleSheet.create({
     },
     rowWithSpace: (justifyContent) => ({
         flexDirection: 'row',
-        alignContent: 'center',
+        alignItems: 'center',
         justifyContent: justifyContent
     })
 })

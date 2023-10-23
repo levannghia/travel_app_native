@@ -49,7 +49,7 @@ const CountryDetails = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" />
-            <ScrollView showsVerticalScrollIndicator={false} scrollEnabled>
+            <ScrollView showsVerticalScrollIndicator={false}>
                 <View>
                     <NetworkImage source={country.imageUrl} width={"100%"} height={350} radius={25} />
                 </View>
@@ -92,7 +92,8 @@ const CountryDetails = ({ navigation }) => {
                         </View>
                         <HeightSpacer height={20} />
                         <PopularList data={country.popular} />
-                        <ReusableButton onPress={() => navigation.navigate('HotelSearch', id)}
+                        <ReusableButton 
+                            onPress={() => navigation.navigate('HotelSearch', id)}
                             btnText={"Find best hotel"}
                             width={SIZES.width - 20}
                             backgroundColor={COLORS.green}
@@ -100,6 +101,7 @@ const CountryDetails = ({ navigation }) => {
                             borderWidth={0}
                             textColor={COLORS.white}
                         />
+                        <HeightSpacer height={20} />
                     </View>
                 </View>
             </ScrollView>

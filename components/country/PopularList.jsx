@@ -1,12 +1,12 @@
 import React from "react";
-import { View, FlatList } from "react-native";
+import { View } from "react-native";
 import ReusableTile from "../reusable/ReusableTile";
 import { useNavigation } from "@react-navigation/native";
 
 const PopularList = ({ data }) => {
     const navigation = useNavigation();
     return (
-        <View>
+        <>
         {
             data.map((item) => (
                 <View style={{ marginBottom: 10 }} key={item._id}>
@@ -14,7 +14,7 @@ const PopularList = ({ data }) => {
                 </View>
             ))
         }
-        </View>
+        </>
     )
 }
 
