@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity, Image, FlatList } from 'react-native'
+import { StyleSheet, View, SafeAreaView, TextInput, TouchableOpacity, Image, FlatList } from 'react-native'
 import React, { useState } from 'react'
 import reusable from '../../components/reusable/reusable.style'
 import { COLORS, SIZES } from '../../constants/theme'
 import { Feather } from '@expo/vector-icons';
 import { ReusableTile } from '../../components';
 import { useNavigation } from '@react-navigation/native';
+import AppBar from '../../components/reusable/AppBar';
 
 const Search = () => {
   const navigation = useNavigation()
@@ -59,6 +60,16 @@ const Search = () => {
 ]
   return (
     <SafeAreaView style={reusable.container}>
+      <View style={{ height: 50 }}>
+        <AppBar
+          title={"Look for hotel"}
+          icon={'search1'}
+          color={COLORS.white}
+          color1={COLORS.white}
+          onPress={navigation.goBack}
+          onPress1={() => navigation.navigate('HotelSearch')}
+        />
+      </View>
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput

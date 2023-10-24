@@ -4,6 +4,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home, Location, Profile, Chat } from '../screens';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import TopBar from './TopTab';
 import { COLORS } from '../constants/theme';
 
 const Tab = createBottomTabNavigator();
@@ -66,7 +67,7 @@ const BottomTabNavigation = () => {
         />)
 
       }} />
-      <Tab.Screen name='Profile' component={Profile} options={{
+      <Tab.Screen name='Profile' component={TopBar} options={{
         tabBarStyle: tabBarStyle,
         headerShown: false,
         tabBarShowLabel: false,
